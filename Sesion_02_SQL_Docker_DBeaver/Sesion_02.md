@@ -30,7 +30,9 @@ Una vez estamos al interior del container en ejecución hacemos:
 - `Password`: edvai
 - `Test Connection + Finish`: Probar la conexión y finalizar.
 
-
+# 06. Consultamos una tabla cualquiera para probar que la conexión esta ok.
+- `northwind>Databases>northwind>Schemas>public>Tables`: nos dirigimos hasta las tablas.
+- `SELECT * FROM categories`: verificamos que se esta haciendo bien la lectura de las tablas.
 
 
 
