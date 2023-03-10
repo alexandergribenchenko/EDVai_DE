@@ -10,7 +10,7 @@ Una vez estamos al interior del container en ejecución hacemos:
 - `apt install nano`: para instalar el editor de texto al interior del contenedor.
 
 # 03. Edicion del archivo de configuración de postgres para cambiar puerto
-- `nano /var/lib/postgresql/pgdata/postgresql.config: nos permite editar el archivo de configuracion de postgres.
+- `nano /var/lib/postgresql/pgdata/postgresql.config`: nos permite editar el archivo de configuracion de postgres.
 - `ctrl+w`: me permite buscar una palabra en particular, en este caso `port`.
 - `port = 5431`: Escribimos sin comentarios el nuevo puerto que deseamos configurar. 
 - `ctrl+o`: nos permite salvar.
