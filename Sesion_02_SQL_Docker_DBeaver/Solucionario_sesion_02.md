@@ -111,7 +111,10 @@ where extract(year from o.order_date) = 1996
 
 ### Q_17. Obtener nombre y apellido del empleados y el identificador de territorio, de todos los empleados y aquellos que hagan match o no de employee_territories:
 ```sql
-
+select  first_name, last_name, t.territory_id 
+from employees e
+left join employee_territories et on e.employee_id  = et.employee_id 
+full outer join territories t on et.territory_id  = t.territory_id 
 ```
 
 ### Q_18. Obtener el identificador de la orden, precio unitario, cantidad y total de todas las órdenes y aquellas órdenes detalles que hagan match o no:
