@@ -89,17 +89,24 @@ left join territories t on et.territory_id = t.territory_id
 
 ### Q_14. Obtener el identificador de la orden y el nombre de la empresa de todos las órdenes y aquellos clientes que hagan match:
 ```sql
-
+select order_id, company_name
+from orders o
+left join customers c on o.customer_id =c.customer_id 
 ```
 
 ### Q_15. Obtener el identificador de la orden, y el nombre de la compañía de todas las órdenes y aquellos clientes que hagan match:
 ```sql
-
+select order_id, company_name
+from orders o
+left join customers c on o.customer_id =c.customer_id 
 ```
 
 ### Q_16. Obtener el nombre de la compañía, y la fecha de la orden de todas las órdenes y aquellos transportistas que hagan match. Solamente para aquellas ordenes del año 1996:
 ```sql
-
+select s.company_name, o.order_date
+from orders o
+left join shippers s  on o.ship_via = s.shipper_id
+where extract(year from o.order_date) = 1996
 ```
 
 ### Q_17. Obtener nombre y apellido del empleados y el identificador de territorio, de todos los empleados y aquellos que hagan match o no de employee_territories:
