@@ -52,52 +52,98 @@ pedido:
 
 ```
 
-### Q_11.
+### Q_11. Obtener la identificación del pedido, el nombre del producto y el descuento de todos los detalles del pedido y productos:
 ```sql
 
 ```
 
-### Q_12.
+### Q_12. Obtener el identificador del cliente, el nombre de la compañía, el identificador y la fecha de la orden de todas las órdenes y aquellos clientes que hagan match :
 ```sql
 
 ```
 
-### Q_13.
+### Q_13. Obtener el identificador del empleados, apellido, identificador de territorio y descripción del territorio de todos los empleados y aquellos que hagan match en territorios:
+Print:
 ```sql
 
 ```
 
-### Q_14.
+### Q_14. Obtener el identificador de la orden y el nombre de la empresa de todos las órdenes y aquellos clientes que hagan match:
 ```sql
 
 ```
 
-### Q_15.
+### Q_15. Obtener el identificador de la orden, y el nombre de la compañía de todas las órdenes y aquellos clientes que hagan match:
 ```sql
 
 ```
 
-### Q_16.
+### Q_16. Obtener el nombre de la compañía, y la fecha de la orden de todas las órdenes y aquellos transportistas que hagan match. Solamente para aquellas ordenes del año 1996:
 ```sql
 
 ```
 
-### Q_17.
+### Q_17. Obtener nombre y apellido del empleados y el identificador de territorio, de todos los empleados y aquellos que hagan match o no de employee_territories:
 ```sql
 
 ```
 
-### Q_18.
+### Q_18. Obtener el identificador de la orden, precio unitario, cantidad y total de todas las órdenes y aquellas órdenes detalles que hagan match o no:
 ```sql
 
 ```
 
-### Q_19.
+### Q_19. Obtener la lista de todos los nombres de los clientes y los nombres de los proveedores:
 ```sql
 
 ```
 
-### Q_20.
+### Q_20. Obtener la lista de los nombres de todos los empleados y los nombres de los gerentes de departamento:
+```sql
+
+```
+
+### Q_21. Obtener los productos del stock que han sido vendidos:
+```sql
+
+```
+
+### Q_22.
+```sql
+
+```
+
+### Q_23.
+```sql
+
+```
+
+### Q_24.
+```sql
+
+```
+
+### Q_25.
+```sql
+
+```
+
+### Q_26.
+```sql
+
+```
+
+### Q_27.
+```sql
+
+```
+
+### Q_28.
+```sql
+
+```
+
+### Q_29.
 ```sql
 
 ```
