@@ -46,7 +46,9 @@ VALUES (5, 'Central')
 
 ### Q_08. Obtener todos los clientes de la tabla Customers donde el campo Región es NULL:
 ```sql
-
+select *
+from customers
+where region is null
 ```
 
 ### Q_09. Obtener Product_Name y Unit_Price de la tabla Products, y si Unit_Price es NULL, use el precio estándar de $10 en su lugar:
