@@ -4,6 +4,6 @@
 
 
 ```sql
-select *
-from perro
+select distinct(category_name)
+from categories
 ```
