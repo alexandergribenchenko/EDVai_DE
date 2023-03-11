@@ -81,7 +81,10 @@ left join customers on orders.customer_id = customers.customer_id
 ### Q_13. Obtener el identificador del empleados, apellido, identificador de territorio y descripción del territorio de todos los empleados y aquellos que hagan match en territorios:
 Print:
 ```sql
-
+select e.employee_id, last_name , et.territory_id, territory_description 
+from employees e
+left join employee_territories et  on e.employee_id = et.employee_id
+left join territories t on et.territory_id = t.territory_id
 ```
 
 ### Q_14. Obtener el identificador de la orden y el nombre de la empresa de todos las órdenes y aquellos clientes que hagan match:
