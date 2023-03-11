@@ -53,7 +53,8 @@ where region is null
 
 ### Q_09. Obtener Product_Name y Unit_Price de la tabla Products, y si Unit_Price es NULL, use el precio estándar de $10 en su lugar:
 ```sql
-
+SELECT product_name , COALESCE(unit_price , '999') as price
+FROM products
 ```
 
 ### Q_10. Obtener el nombre de la empresa, el nombre del contacto y la fecha del pedido de todos los pedidos:
