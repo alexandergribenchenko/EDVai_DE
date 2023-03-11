@@ -53,13 +53,15 @@ where region is null
 
 ### Q_09. Obtener Product_Name y Unit_Price de la tabla Products, y si Unit_Price es NULL, use el precio estándar de $10 en su lugar:
 ```sql
-SELECT product_name , COALESCE(unit_price , '999') as price
+SELECT product_name , COALESCE(unit_price , '10') as price
 FROM products
 ```
 
 ### Q_10. Obtener el nombre de la empresa, el nombre del contacto y la fecha del pedido de todos los pedidos:
 ```sql
-
+select company_name, contact_name, order_date
+from orders
+left join customers on orders.customer_id = customers.customer_id
 ```
 
 ### Q_11. Obtener la identificación del pedido, el nombre del producto y el descuento de todos los detalles del pedido y productos:
