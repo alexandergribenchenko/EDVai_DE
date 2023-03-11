@@ -34,12 +34,14 @@ order by employee_id, order_date
 
 ### Q_06. Insertar un nuevo cliente en la tabla Customers:
 ```sql
-
+INSERT INTO Customers (customer_id, company_name, contact_name, contact_title, address, city, region, postal_code, country, phone, fax) 
+VALUES ('ABCDE', 'ACME Corporation', 'John Smith', 'Sales Manager', '123 Main St.', 'Anytown', 'CA', '12345', 'USA', '555-555-1212', '555-555-1213')
 ```
 
 ### Q_07. Insertar una nueva región en la tabla Región:
 ```sql
-
+INSERT INTO region (region_id, region_description) 
+VALUES (5, 'Central')
 ```
 
 ### Q_08. Obtener todos los clientes de la tabla Customers donde el campo Región es NULL:
