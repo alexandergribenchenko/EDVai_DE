@@ -8,23 +8,28 @@ from categories
 
 ### Q_02. Obtener una lista de todas las regiones distintas para los clientes:
 ```sql
-
+select distinct(region)
+from customers
 ```
 
 ### Q_03. Obtener una lista de todos los títulos de contacto distintos:
 ```sql
-
+select distinct(contact_title)
+from customers
 ```
 
 ### Q_04. Obtener una lista de todos los clientes, ordenados por país:
 ```sql
-
+select *
+from customers
+order by country ASC
 ```
 
-### Q_05. Obtener una lista de todos los pedidos, ordenados por id del empleado y fecha del
-pedido:
+### Q_05. Obtener una lista de todos los pedidos, ordenados por id del empleado y fecha del pedido:
 ```sql
-
+select *
+from orders
+order by employee_id, order_date
 ```
 
 ### Q_06. Insertar un nuevo cliente en la tabla Customers:
