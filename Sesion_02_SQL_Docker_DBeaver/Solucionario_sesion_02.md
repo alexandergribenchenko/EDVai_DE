@@ -66,7 +66,9 @@ left join customers on orders.customer_id = customers.customer_id
 
 ### Q_11. Obtener la identificación del pedido, el nombre del producto y el descuento de todos los detalles del pedido y productos:
 ```sql
-
+select order_id, product_name, discount 
+from order_details
+left join products on order_details.product_id = products.product_id 
 ```
 
 ### Q_12. Obtener el identificador del cliente, el nombre de la compañía, el identificador y la fecha de la orden de todas las órdenes y aquellos clientes que hagan match :
