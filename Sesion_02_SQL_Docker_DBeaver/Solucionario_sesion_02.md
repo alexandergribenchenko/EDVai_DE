@@ -108,42 +108,42 @@ Print:
 
 ```
 
-### Q_22.
+### Q_22. Obtener los clientes que han realizado un pedido con destino a Argentina:
 ```sql
 
 ```
 
-### Q_23.
+### Q_23. Obtener el nombre de los productos que nunca han sido pedidos por clientes de Francia:
 ```sql
 
 ```
 
-### Q_24.
+### Q_24. Obtener la cantidad de productos vendidos por identificador de orden:
 ```sql
 
 ```
 
-### Q_25.
+### Q_25. Obtener el promedio de productos en stock por producto:
 ```sql
 
 ```
 
-### Q_26.
+### Q_26. Cantidad de productos en stock por producto, donde haya más de 100 productos en stock:
 ```sql
 
 ```
 
-### Q_27.
+### Q_27. Obtener el promedio de frecuencia de pedidos por cada compañía y solo mostrar aquellas con un promedio de frecuencia de pedidos superior a 10:
 ```sql
 
 ```
 
-### Q_28.
+### Q_28. Obtener el nombre del producto y su categoría, pero muestre "Discontinued" en lugar del nombre de la categoría si el producto ha sido descontinuado:
 ```sql
 
 ```
 
-### Q_29.
+### Q_29. Obtener el nombre del empleado y su título, pero muestre "Gerente de Ventas" en lugar del título si el empleado es un gerente de ventas (Sales Manager):
 ```sql
 
 ```
