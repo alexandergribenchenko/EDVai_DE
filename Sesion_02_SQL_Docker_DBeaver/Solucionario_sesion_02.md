@@ -2,7 +2,8 @@
 
 # Q_01. Obtener una lista de todas las categorías distintas:
 
-´´´sql
+
+```sql
 select *
 from perro
-´´´
+```
