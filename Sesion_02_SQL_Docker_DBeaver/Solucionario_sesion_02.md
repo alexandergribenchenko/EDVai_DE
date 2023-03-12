@@ -141,7 +141,13 @@ from employees e
 
 ### Q_21. Obtener los productos del stock que han sido vendidos:
 ```sql
-
+WITH table_product_id AS (select distinct(od.product_id)
+				  from order_details od
+				  left join products p on od.product_id = p.product_id
+				  order by product_id)
+select product_name, product_id
+from products
+where product_id IN (SELECT product_id FROM table_product_id)
 ```
 
 ### Q_22. Obtener los clientes que han realizado un pedido con destino a Argentina:
