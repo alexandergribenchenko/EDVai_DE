@@ -208,5 +208,10 @@ group by od.order_id
 
 ### Q_29. Obtener el nombre del empleado y su título, pero muestre "Gerente de Ventas" en lugar del título si el empleado es un gerente de ventas (Sales Manager):
 ```sql
-
+select first_name, last_name,
+	CASE
+		WHEN title = 'Sales Manager' THEN 'Gerente de ventas'
+	    	ELSE title
+	    END AS tipo
+from employees
 ```
