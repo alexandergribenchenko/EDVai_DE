@@ -126,12 +126,17 @@ left join order_details od on o.order_id = od.order_id
 
 ### Q_19. Obtener la lista de todos los nombres de los clientes y los nombres de los proveedores:
 ```sql
-
+select distinct(s.company_name)
+from suppliers s
+union
+select distinct(c.company_name)
+from customers c
 ```
 
 ### Q_20. Obtener la lista de los nombres de todos los empleados y los nombres de los gerentes de departamento:
 ```sql
-
+select distinct(e.first_name)
+from employees e
 ```
 
 ### Q_21. Obtener los productos del stock que han sido vendidos:
