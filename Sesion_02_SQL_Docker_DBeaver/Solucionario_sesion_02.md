@@ -203,7 +203,13 @@ group by od.order_id
 
 ### Q_28. Obtener el nombre del producto y su categoría, pero muestre "Discontinued" en lugar del nombre de la categoría si el producto ha sido descontinuado:
 ```sql
-
+SELECT p.product_name,
+    CASE
+        WHEN p.discontinued = 1 THEN 'Discontinued'
+        ELSE c.category_name
+    END AS product_category
+FROM products p
+LEFT JOIN categories c ON p.category_id = c.category_id
 ```
 
 ### Q_29. Obtener el nombre del empleado y su título, pero muestre "Gerente de Ventas" en lugar del título si el empleado es un gerente de ventas (Sales Manager):
