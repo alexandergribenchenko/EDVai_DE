@@ -155,7 +155,7 @@ where product_id IN (SELECT product_id FROM table_product_id)
 
 ```
 
-### **Q_23. (Duda) Obtener el nombre de los productos que nunca han sido pedidos por clientes de Francia:
+### **Q_23. (Duda)** Obtener el nombre de los productos que nunca han sido pedidos por clientes de Francia:
 ```sql
 WITH customer_id_france AS (
     SELECT customer_id
