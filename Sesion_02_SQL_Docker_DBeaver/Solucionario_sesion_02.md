@@ -119,7 +119,9 @@ full outer join territories t on et.territory_id  = t.territory_id
 
 ### Q_18. Obtener el identificador de la orden, precio unitario, cantidad y total de todas las órdenes y aquellas órdenes detalles que hagan match o no:
 ```sql
-
+select  o.order_id, od.unit_price, od.quantity, od.unit_price*od.quantity as total
+from orders o
+left join order_details od on o.order_id = od.order_id
 ```
 
 ### Q_19. Obtener la lista de todos los nombres de los clientes y los nombres de los proveedores:
