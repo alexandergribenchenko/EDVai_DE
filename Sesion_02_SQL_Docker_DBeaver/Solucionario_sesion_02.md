@@ -155,9 +155,27 @@ where product_id IN (SELECT product_id FROM table_product_id)
 
 ```
 
-### Q_23. Obtener el nombre de los productos que nunca han sido pedidos por clientes de Francia:
+### **Q_23. (Duda) Obtener el nombre de los productos que nunca han sido pedidos por clientes de Francia:
 ```sql
-
+WITH customer_id_france AS (
+    SELECT customer_id
+    FROM customers 
+    WHERE country = 'France'
+), 
+orders_customer_id_france AS (
+    SELECT order_id
+    FROM orders o
+    RIGHT JOIN customer_id_france cfr ON o.customer_id = cfr.customer_id
+), 
+products_orders_customer_id_france AS (
+    SELECT distinct product_id
+    FROM order_details od
+    RIGHT JOIN orders_customer_id_france ocf ON od.order_id = ocf.order_id
+    order by product_id asc
+)
+select product_name, product_id
+from products
+where product_id IN (SELECT product_id FROM products_orders_customer_id_france)
 ```
 
 ### Q_24. Obtener la cantidad de productos vendidos por identificador de orden:
