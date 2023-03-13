@@ -152,7 +152,15 @@ where product_id IN (SELECT product_id FROM table_product_id)
 
 ### Q_22. Obtener los clientes que han realizado un pedido con destino a Argentina:
 ```sql
-
+WITH customers_id_ship_Argentina AS (
+	SELECT distinct customer_id
+	FROM orders o
+	where ship_country = 'Argentina'
+)
+select company_name
+from customers
+where customer_id IN (SELECT customer_id 
+		      FROM customers_id_ship_Argentina)
 ```
 
 ### **Q_23. (Duda)** Obtener el nombre de los productos que nunca han sido pedidos por clientes de Francia:
