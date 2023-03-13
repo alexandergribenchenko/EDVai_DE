@@ -187,7 +187,10 @@ group by od.order_id
 
 ### Q_25. Obtener el promedio de productos en stock por producto:
 ```sql
-
+SELECT product_name, avg(units_in_stock)
+FROM products p
+where units_in_stock <> 0
+group by product_name
 ```
 
 ### Q_26. Cantidad de productos en stock por producto, donde haya más de 100 productos en stock:
