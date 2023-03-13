@@ -192,7 +192,11 @@ group by od.order_id
 
 ### Q_26. Cantidad de productos en stock por producto, donde haya más de 100 productos en stock:
 ```sql
-
+SELECT product_name, sum(units_in_stock)
+FROM products p
+where units_in_stock <> 0
+group by product_name
+having sum(units_in_stock)>100
 ```
 
 ### Q_27. Obtener el promedio de frecuencia de pedidos por cada compañía y solo mostrar aquellas con un promedio de frecuencia de pedidos superior a 10:
