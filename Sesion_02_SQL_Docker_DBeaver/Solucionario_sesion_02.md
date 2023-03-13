@@ -181,8 +181,7 @@ where product_id IN (SELECT product_id FROM products_orders_customer_id_france)
 ### Q_24. Obtener la cantidad de productos vendidos por identificador de orden:
 ```sql
 SELECT od.order_id, SUM(quantity)
-FROM orders o
-LEFT JOIN order_details od ON o.order_id  = od.order_id
+FROM order_details od
 group by od.order_id
 ```
 
