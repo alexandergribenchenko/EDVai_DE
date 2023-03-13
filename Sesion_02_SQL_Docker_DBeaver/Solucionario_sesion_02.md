@@ -183,7 +183,7 @@ products_orders_customer_id_france AS (
 )
 select product_name, product_id
 from products
-where product_id IN (SELECT product_id FROM products_orders_customer_id_france)
+where product_id NOT IN (SELECT product_id FROM products_orders_customer_id_france)
 ```
 
 ### Q_24. Obtener la cantidad de productos vendidos por identificador de orden:
@@ -212,7 +212,10 @@ having sum(units_in_stock)>100
 
 ### Q_27. Obtener el promedio de frecuencia de pedidos por cada compañía y solo mostrar aquellas con un promedio de frecuencia de pedidos superior a 10:
 ```sql
-
+select c.company_name, avg(order_id)
+from orders o
+inner join customers c on o.customer_id = c.customer_id
+group by c.company_name
 ```
 
 ### Q_28. Obtener el nombre del producto y su categoría, pero muestre "Discontinued" en lugar del nombre de la categoría si el producto ha sido descontinuado:
