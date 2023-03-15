@@ -12,8 +12,13 @@ queries del punto B. Subirlo al mismo repositorio del punto B
 
 ### Q_01. Obtener el promedio de precios por cada categoría de producto. La cláusula `OVER(PARTITION BY CategoryID)` específica que se debe calcular el promedio de precios por cada valor único de `CategoryID` en la tabla.
 ```sql
-select distinct(category_name)
-from categories
+select  
+	c.category_name, 
+	p.product_name, 
+	p.unit_price,
+	AVG(p.unit_price) OVER (PARTITION BY c.category_name) AS avgpricebycategory
+from products p 
+left join categories c on p.category_id  = c.category_id 
 ```
 
 ### Q_02. Obtener una lista de todas las regiones distintas para los clientes:
