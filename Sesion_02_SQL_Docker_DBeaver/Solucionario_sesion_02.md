@@ -1,8 +1,9 @@
 # Solucionario sesión # 02
 
 ### Revisión
-Fede Pineyro — hoy a las 13:40
-Por favor revisar los siguientes ejercicios:
+- Fede Pineyro — hoy a las 13:40
+- Por favor revisar los siguientes ejercicios:
+
 11, 17, 18, 19 (no hace falta el distinct), 20, 27
 
 
