@@ -192,6 +192,21 @@ select product_name, product_id
 from products
 where product_id NOT IN (SELECT product_id FROM products_orders_customer_id_france)
 ```
+Versión Fede:
+```sql
+SELECT Product_Name
+FROM Products
+WHERE Product_ID NOT IN (SELECT Product_ID
+  FROM Order_Details
+  WHERE Order_ID IN (SELECT Order_ID
+    FROM Orders
+    WHERE Customer_ID IN (
+      SELECT Customer_ID
+      FROM Customers
+      WHERE Country = 'France' )
+  )
+);
+```
 
 ### Q_24. Obtener la cantidad de productos vendidos por identificador de orden:
 ```sql
