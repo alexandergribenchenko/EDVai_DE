@@ -76,8 +76,7 @@ left join categories c on p.category_id  = c.category_id
  
 ```
 
-### Q_13. Ranking de empleados por fecha de contratacion
-Print:
+### Q_13. Ranking de empleados por fecha de contratación
 ```sql
 
 ```
