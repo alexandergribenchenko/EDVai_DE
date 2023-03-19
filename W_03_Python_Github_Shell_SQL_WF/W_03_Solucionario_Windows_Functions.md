@@ -51,7 +51,13 @@ from orders
 
 ### Q_05. Seleccione el id de producto, el nombre de producto, el precio unitario, el id de categoría y el precio unitario máximo para cada categoría de la tabla `Products`.
 ```sql
-
+select  
+	product_id,  
+	product_name,
+	unit_price,
+	category_id,
+	MAX(unit_price) OVER (PARTITION BY category_id) AS maxunitprice
+from products
 ```
 
 ### Q_06. Obtener el ranking de los productos más vendidos:
