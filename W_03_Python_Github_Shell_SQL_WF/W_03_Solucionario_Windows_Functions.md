@@ -62,7 +62,13 @@ from products
 
 ### Q_06. Obtener el ranking de los productos más vendidos:
 ```sql
-
+select  
+	RANK() OVER (ORDER BY SUM(od.quantity) DESC) AS ranking,
+	p.product_name,
+	SUM(od.quantity) as totalquantity	
+from order_details od 
+right join products p on od.product_id = p.product_id
+group by p.product_name
 ```
 
 ### Q_07. Asignar numeros de fila para cada cliente, ordenados por customer_id
