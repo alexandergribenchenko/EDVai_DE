@@ -92,8 +92,7 @@ Print:
 
 ```
 
-### Q_16. Obtener un listado de ordenes mostrando el id de la orden, fecha de orden, id del cliente
-y última fecha de orden
+### Q_16. Obtener un listado de ordenes mostrando el id de la orden, fecha de orden, id del cliente y última fecha de orden
 ```sql
 
 ```
