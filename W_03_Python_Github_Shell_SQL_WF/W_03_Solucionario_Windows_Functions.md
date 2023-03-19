@@ -42,7 +42,11 @@ left join categories c on p.category_id = c.category_id
 
 ### Q_04. Selecciona el ID del cliente, la fecha de la orden y la fecha más antigua de la orden para cada cliente de la tabla 'Orders'.
 ```sql
-
+select  
+	customer_id,  
+	order_date,  
+	MIN(order_date) OVER (PARTITION BY customer_id) AS earliestorderdate
+from orders
 ```
 
 ### Q_05. Seleccione el id de producto, el nombre de producto, el precio unitario, el id de categoría y el precio unitario máximo para cada categoría de la tabla `Products`.
