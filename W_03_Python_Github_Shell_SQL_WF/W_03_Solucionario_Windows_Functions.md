@@ -28,7 +28,16 @@ left join categories c on p.category_id  = c.category_id
 
 ### Q_03. Obtener el promedio de cantidad de productos vendidos por categoría `(product_name, quantity_per_unit, unit_price, quantity, avgquantity)' 
 ```sql
-
+select  
+	p.product_name, 
+	c.category_name, 
+	p.quantity_per_unit,
+	od.unit_price, 
+	od.quantity,
+	AVG(od.quantity) OVER (PARTITION BY c.category_name) AS avgquantity
+from order_details od
+left join products p on od.product_id = p.product_id
+left join categories c on p.category_id = c.category_id
 ```
 
 ### Q_04. Selecciona el ID del cliente, la fecha de la orden y la fecha más antigua de la orden para cada cliente de la tabla 'Orders'.
