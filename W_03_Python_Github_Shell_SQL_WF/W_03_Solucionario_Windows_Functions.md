@@ -28,22 +28,47 @@ left join categories c on p.category_id  = c.category_id
 
 ### Q_03. Obtener el promedio de cantidad de productos vendidos por categoría `(product_name, quantity_per_unit, unit_price, quantity, avgquantity)' 
 ```sql
-
+select  
+	p.product_name, 
+	c.category_name, 
+	p.quantity_per_unit,
+	od.unit_price, 
+	od.quantity,
+	AVG(od.quantity) OVER (PARTITION BY c.category_name) AS avgquantity
+from order_details od
+left join products p on od.product_id = p.product_id
+left join categories c on p.category_id = c.category_id
 ```
 
 ### Q_04. Selecciona el ID del cliente, la fecha de la orden y la fecha más antigua de la orden para cada cliente de la tabla 'Orders'.
 ```sql
-
+select  
+	customer_id,  
+	order_date,  
+	MIN(order_date) OVER (PARTITION BY customer_id) AS earliestorderdate
+from orders
 ```
 
 ### Q_05. Seleccione el id de producto, el nombre de producto, el precio unitario, el id de categoría y el precio unitario máximo para cada categoría de la tabla `Products`.
 ```sql
-
+select  
+	product_id,  
+	product_name,
+	unit_price,
+	category_id,
+	MAX(unit_price) OVER (PARTITION BY category_id) AS maxunitprice
+from products
 ```
 
 ### Q_06. Obtener el ranking de los productos más vendidos:
 ```sql
-
+select  
+	RANK() OVER (ORDER BY SUM(od.quantity) DESC) AS ranking,
+	p.product_name,
+	SUM(od.quantity) as totalquantity	
+from order_details od 
+right join products p on od.product_id = p.product_id
+group by p.product_name
 ```
 
 ### Q_07. Asignar numeros de fila para cada cliente, ordenados por customer_id
@@ -76,8 +101,7 @@ left join categories c on p.category_id  = c.category_id
  
 ```
 
-### Q_13. Ranking de empleados por fecha de contratacion
-Print:
+### Q_13. Ranking de empleados por fecha de contratación
 ```sql
 
 ```
@@ -92,8 +116,7 @@ Print:
 
 ```
 
-### Q_16. Obtener un listado de ordenes mostrando el id de la orden, fecha de orden, id del cliente
-y última fecha de orden
+### Q_16. Obtener un listado de ordenes mostrando el id de la orden, fecha de orden, id del cliente y última fecha de orden
 ```sql
 
 ```
