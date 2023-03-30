@@ -1,8 +1,10 @@
 # Práctica Ingest
 
-# 1. Ingresar a la vm, luego ir a la carpeta "data engineer" y a consola_hadoop. Luego seleccionar Run.
+# Q_01. 
+Ingresar a la vm, luego ir a la carpeta "data engineer" y a consola_hadoop. Luego seleccionar Run.
 
-# 2. Ingresar al directorio /home/hadoop/scripts.
+# Q_02. 
+Ingresar al directorio `/home/hadoop/scripts`.
 ```bash
 cat /home/hadoop/scripts
 ```
