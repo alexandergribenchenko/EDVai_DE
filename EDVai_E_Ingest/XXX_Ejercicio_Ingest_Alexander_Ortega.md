@@ -1,30 +1,26 @@
+# Práctica Ingest
+
 ```bash
 cat /home/hadoop/scripts
 ```
 
-```linux
+
+1. Ingresar a la vm, luego ir a la carpeta "data engineer" y a consola_hadoop. Luego seleccionar Run.
+
+2. Ingresar al directorio /home/hadoop/scripts.
+```bash
 cat /home/hadoop/scripts
 ```
 
-```gatoperr0
-def cat /home/hadoop/scripts
+
+3. Crear un script llamado landing.sh que baje el archivo `https://github.com/fpineyro/homework-0/blob/master/starwars.csv` al
+directorio temporal /home/hadoop/landing y luego lo envíe al directorio de Hadoop file system (HDFS) /ingest. Antes de finalizar el
+script que borre el archivo starwars.csv del directorio temporal.
+
+- Creamos el archivo con `touch`:
+```bash
+touch landing.sh
 ```
-
-perro
-
-
-
-
-2-Ingresar al directorio /home/hadoop/scripts
-
-```cd /home/hadoop/scripts```
-
-3-Crear un script llamado landing.sh que baje el archivo
-https://github.com/fpineyro/homework-0/blob/master/starwars.csv al
-directorio temporal /home/hadoop/landing y luego lo envíe al
-directorio de Hadoop file system (HDFS) /ingest. Antes de finalizar el
-script que borre el archivo starwars.csv del directorio temporal
-
 
 
 ```touch landing.sh```
