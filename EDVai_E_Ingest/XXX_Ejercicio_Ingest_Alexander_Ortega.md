@@ -1,13 +1,13 @@
 ```bash
-cd /home/hadoop/scripts
+cat /home/hadoop/scripts
 ```
 
 ```linux
-cd /home/hadoop/scripts
+cat /home/hadoop/scripts
 ```
 
 ```
-cd /home/hadoop/scripts
+cat /home/hadoop/scripts
 ```
 
 perro
