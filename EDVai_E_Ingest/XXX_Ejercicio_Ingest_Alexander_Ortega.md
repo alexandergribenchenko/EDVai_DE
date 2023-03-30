@@ -7,7 +7,7 @@ cat /home/hadoop/scripts
 ```
 
 ```python
-cat /home/hadoop/scripts
+def cat /home/hadoop/scripts
 ```
 
 perro
