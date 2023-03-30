@@ -1,3 +1,18 @@
+```bash
+cd /home/hadoop/scripts
+```
+
+```linux
+cd /home/hadoop/scripts
+```
+
+```
+cd /home/hadoop/scripts
+```
+
+perro
+
+
 
 
 2-Ingresar al directorio /home/hadoop/scripts
