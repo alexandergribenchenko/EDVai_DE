@@ -26,18 +26,23 @@ hdfs dfs -put /home/hadoop/landing/starwars.csv /ingest
 rm /home/hadoop/landing/starwars.csv
 ```
 
-# 4. Cambiar permisos para que el script pueda ser ejecutado
+### Q_04. 
+Cambiar permisos para que el script pueda ser ejecutado
 ```bash
 chmod 777 landing.sh
 ```
 
-5. Ejecutar el script para que baje el archivo starwars.csv de Github y lo
-envíe al directorio /ingest de HDFS
+### Q_05. 
+Ejecutar el script para que baje el archivo starwars.csv de Github y lo envíe al directorio `/ingest` de HDFS.
+```bash
+./landing.sh
+```
 
-```./landing.sh```
+### Q_06. 
+Verificar que el archivo se encuentre en el directorio /ingest de HDFS
+```bash
+hdfs dfs -ls /ingest
+```
 
-6. Verificar que el archivo se encuentre en el directorio /ingest de HDFS
-
-```hdfs dfs -ls /ingest```
-
-
+### Q_07. 
+Al finalizar por favor apagar la VM
