@@ -16,14 +16,13 @@ script que borre el archivo starwars.csv del directorio temporal.
 ```bash
 touch landing.sh
 ```
-
-
-```touch landing.sh```
-
-```#!/bin/bash
+- Contenido del archivo `touch landing.sh`:
+```bash
+#!/bin/bash
 wget -P /home/hadoop/landing https://github.com/fpineyro/homework-0/blob/master>
 hdfs dfs -put /home/hadoop/landing/starwars.csv /ingest
-rm /home/hadoop/landing/starwars.cs```
+rm /home/hadoop/landing/starwars.csv
+```
 
 4. Cambiar permisos para que el script pueda ser ejecutado
 
