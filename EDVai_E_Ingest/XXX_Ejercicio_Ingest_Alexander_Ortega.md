@@ -6,7 +6,7 @@ cat /home/hadoop/scripts
 cat /home/hadoop/scripts
 ```
 
-```
+```python
 cat /home/hadoop/scripts
 ```
 
