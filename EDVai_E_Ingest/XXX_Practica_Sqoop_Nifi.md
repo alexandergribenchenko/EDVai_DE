@@ -1,7 +1,78 @@
-# Práctica Ingest
+# Práctica Sqoop
 
-### Q_01. 
-Ingresar a la vm, luego ir a la carpeta "data engineer" y a consola_hadoop. Luego seleccionar Run.
+## Comandos
+
+### Listar databases
+```bash
+sqoop list-databases \
+--connect jdbc:postgresql://172.17.0.3:5432/northwind \
+--username postgres -P
+```
+
+### Listar tablas 
+```bash
+sqoop list-tables \
+--connect jdbc:postgresql://172.17.0.3:5432/northwind \
+--username postgres -P
+```
+
+### Ejecutar queries
+```bash
+sqoop eval \
+--connect jdbc:postgresql://172.17.0.3:5432/northwind \
+--username postgres \
+--P \
+--query "select * from region limit 10"
+```
+
+### Importar tablas
+```bash
+sqoop import \
+--connect jdbc:postgresql://172.17.0.3:5432/northwind \
+--username postgres\
+--table region\
+--m 1 \
+--P \
+--target-dir /sqoop/ingest \
+--as-parquetfile \
+--delete-target-dir
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Q_02. 
 Ingresar al directorio `/home/hadoop/scripts`.
