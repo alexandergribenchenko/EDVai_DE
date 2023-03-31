@@ -1,6 +1,6 @@
-# Práctica Sqoop
+# Sección 01. Práctica Sqoop.
 
-## Comandos Sqoop
+## 01.01. Comandos Sqoop.
 
 ### Listar databases
 ```bash
@@ -52,7 +52,7 @@ sqoop import \
 --delete-target-dir
 ```
 
-## Ejercicios Sqoop
+## 01.02. Ejercicios Sqoop
 
 ### Q_01. 
 Mostrar las tablas de la base de datos `northwind`.
