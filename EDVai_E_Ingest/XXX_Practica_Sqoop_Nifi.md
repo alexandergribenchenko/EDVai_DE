@@ -1,6 +1,6 @@
 # Práctica Sqoop
 
-## Comandos
+## Comandos Sqoop
 
 ### Listar databases
 ```bash
@@ -38,82 +38,44 @@ sqoop import \
 --delete-target-dir
 ```
 
+### Importar tablas con filtro
+```bash
+sqoop import \
+--connect jdbc:postgresql://172.17.0.3:5432/northwind \
+--username postgres\
+--table region\
+--m 1 \
+--P \
+--target-dir /sqoop/ingest/southern \
+--as-parquetfile \
+--where "region_description = 'Southern' " \
+--delete-target-dir
+```
 
+## Ejercicios Sqoop
 
+### Q_01. 
+Mostrar las tablas de la base de datos `northwind`.
+```bash
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 ### Q_02. 
-Ingresar al directorio `/home/hadoop/scripts`.
+Mostrar los clientes de `Argentina`.
 ```bash
-cat /home/hadoop/scripts
-```
 
+```
 
 ### Q_03. 
-Crear un script llamado landing.sh que baje el archivo `https://github.com/fpineyro/homework-0/blob/master/starwars.csv` al
-directorio temporal `/home/hadoop/landing` y luego lo envíe al directorio de Hadoop file system (HDFS) `/ingest`. Antes de finalizar el script que borre el archivo `starwars.csv` del directorio temporal.
+Importar un archivo `.parquet` que contenga toda la tabla orders. Luego ingestar el archivo a HDFS (carpeta `/sqoop/ingest`).
+```bash
 
-- **Paso 01.** Creamos el archivo con `touch`:
-```bash
-touch landing.sh
-```
-- **Paso 02.** Contenido del archivo `touch landing.sh`:
-```bash
-#!/bin/bash
-wget -P /home/hadoop/landing https://github.com/fpineyro/homework-0/blob/master>
-hdfs dfs -put /home/hadoop/landing/starwars.csv /ingest
-rm /home/hadoop/landing/starwars.csv
 ```
 
 ### Q_04. 
-Cambiar permisos para que el script pueda ser ejecutado
+Importar un archivo `.parquet` que contenga solo los productos con mas 20 unidades en stock, de la tabla `Products`. Luego ingestar el archivo a HDFS (carpeta `ingest`).
 ```bash
-chmod 777 landing.sh
+
 ```
 
-### Q_05. 
-Ejecutar el script para que baje el archivo starwars.csv de Github y lo envíe al directorio `/ingest` de HDFS.
-```bash
-./landing.sh
-```
 
-### Q_06. 
-Verificar que el archivo se encuentre en el directorio /ingest de HDFS
-```bash
-hdfs dfs -ls /ingest
-```
-
-### Q_07. 
-Al finalizar por favor apagar la VM
