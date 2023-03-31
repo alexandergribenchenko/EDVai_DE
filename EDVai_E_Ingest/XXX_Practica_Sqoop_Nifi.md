@@ -78,4 +78,25 @@ Importar un archivo `.parquet` que contenga solo los productos con mas 20 unidad
 
 ```
 
+# Sección 02. Práctica Nifi.
+Recordar: `https://localhost:8443/nifi`
+
+### Q_01. 
+En el shell de Nifi, crear un script `.sh` que descargue el archivo `starwars.csv` al directorio `/home/nifi/ingest` (crearlo si es necesario). Ejecutarlo con `./home/nifi/ingest/ingest.sh`. El archivo se encuentra en el enlace: `https://github.com/fpineyro/homework-0/blob/master/starwars.csv`.
+
+
+```bash
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
