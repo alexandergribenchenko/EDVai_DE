@@ -4,15 +4,47 @@
 Ingresar a la vm, luego ir a la carpeta "data engineer" y a consola_hadoop. Luego seleccionar Run.
 
 ### Q_02. 
-Ingresar al directorio `/home/hadoop/scripts`.
+Ingresar al directorio `/home/hadoop/scripts`. (Esto lo hacemos al interio de la consola de hadoop).
 ```bash
-cat /home/hadoop/scripts
+cd /home/hadoop/scripts
+```
+
+Podemos leer lo que hay al interior de cualquier archivo con el comando `cat`
+ ```bash
+cat ingest.sh
+```
+
+Podemos editar un archivo  lo que hay al interior de cualquier archivo con el comando `cat`
+ ```bash
+cat ingest.sh
+```
+
+##### Comandos de nano
+Podemos editar un archivo  lo que hay al interior de cualquier archivo con el comando `cat`
+ ```bash
+cat ingest.sh
+```
+
+##### Comandos de hdfs 
+Podemos enlistar lo que se encuntra al interior de HDFS.
+ ```bash
+hdfs dfs -ls /
+hdfs dfs -ls /ingest
 ```
 
 
+
+
+
+Ctrl - X: Salir
+
+
+
+
+
+
 ### Q_03. 
-Crear un script llamado landing.sh que baje el archivo `https://github.com/fpineyro/homework-0/blob/master/starwars.csv` al
-directorio temporal `/home/hadoop/landing` y luego lo envíe al directorio de Hadoop file system (HDFS) `/ingest`. Antes de finalizar el script que borre el archivo `starwars.csv` del directorio temporal.
+Crear un script llamado landing.sh que baje el archivo `https://github.com/fpineyro/homework-0/blob/master/starwars.csv` al directorio temporal `/home/hadoop/landing` y luego lo envíe al directorio de Hadoop file system (HDFS) `/ingest`. Antes de finalizar el script que borre el archivo `starwars.csv` del directorio temporal.
 
 - **Paso 01.** Creamos el archivo con `touch`:
 ```bash
@@ -21,7 +53,7 @@ touch landing.sh
 - **Paso 02.** Contenido del archivo `touch landing.sh`:
 ```bash
 #!/bin/bash
-wget -P /home/hadoop/landing https://github.com/fpineyro/homework-0/blob/master>
+wget -P /home/hadoop/landing https://github.com/fpineyro/homework-0/blob/master/starwars.csv
 hdfs dfs -put /home/hadoop/landing/starwars.csv /ingest
 rm /home/hadoop/landing/starwars.csv
 ```
