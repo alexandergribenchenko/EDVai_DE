@@ -57,14 +57,23 @@ sqoop import \
 ### Q_01. 
 Mostrar las tablas de la base de datos `northwind`.
 ```bash
-
+sqoop list-tables \
+--connect jdbc:postgresql://172.17.0.3:5432/northwind \
+--username postgres 
+-P
 ```
 
 ### Q_02. 
 Mostrar los clientes de `Argentina`.
 ```bash
-
+sqoop eval \
+--connect jdbc:postgresql://172.17.0.3:5432/northwind \
+--username postgres \
+--P \
+--query "select company_name, contact_name from customers where country = 'Argentina'"
 ```
+PDT: incluir el $CONDITIONS que aparece en el video principal de Fede.
+
 
 ### Q_03. 
 Importar un archivo `.parquet` que contenga toda la tabla orders. Luego ingestar el archivo a HDFS (carpeta `/sqoop/ingest`).
