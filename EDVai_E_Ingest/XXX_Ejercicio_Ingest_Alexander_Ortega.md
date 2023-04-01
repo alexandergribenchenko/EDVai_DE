@@ -14,9 +14,9 @@ Podemos leer lo que hay al interior de cualquier archivo con el comando `cat`
 cat ingest.sh
 ```
 
-Podemos editar un archivo  lo que hay al interior de cualquier archivo con el comando `cat`
+Podemos editar un archivo  con el editor `nano`
  ```bash
-cat ingest.sh
+nano ingest.sh
 ```
 
 ##### Comandos de nano
@@ -24,6 +24,7 @@ Podemos editar un archivo  lo que hay al interior de cualquier archivo con el co
  ```bash
 cat ingest.sh
 ```
+Ctrl - X: Salir
 
 ##### Comandos de hdfs 
 Podemos enlistar lo que se encuntra al interior de HDFS.
@@ -36,7 +37,7 @@ hdfs dfs -ls /ingest
 
 
 
-Ctrl - X: Salir
+
 
 
 
