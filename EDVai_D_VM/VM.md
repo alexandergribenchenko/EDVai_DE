@@ -12,6 +12,9 @@
 - fedepineyro/edvai_postgres:v1 edvai_postgres
 - fedepineyro/edvai_ubuntu:v6  edvai_hadoop
 
+`docker inspect edvai_postgres`: nos permite ver la IP donde esta corriendo el contenedor.
+
+
 
 ```
 CONTAINER ID   IMAGE                           COMMAND                  CREATED       STATUS                     PORTS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    NAMES
