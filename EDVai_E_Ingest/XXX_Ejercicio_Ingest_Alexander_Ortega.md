@@ -33,6 +33,17 @@ hdfs dfs -ls /
 hdfs dfs -ls /ingest
 ```
 
+Podemos enlistar lo que se encuntra al interior de HDFS.
+ ```bash
+hdfs dfs -ls /
+hdfs dfs -ls /ingest
+```
+
+
+
+
+##### que son los archivos .sh
+Los archivos ".sh" en Linux son archivos de script de shell utilizados para automatizar tareas y ejecutar comandos de shell.
 
 
 
