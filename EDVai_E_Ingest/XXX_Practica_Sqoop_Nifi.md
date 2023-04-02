@@ -84,6 +84,7 @@ Importar un archivo `.parquet` que contenga toda la tabla orders. Luego ingestar
 - **Paso 03.01.**
 Verificar si el directorio donde se va a ingestar existe, y sino crearlo.
 ```bash
+hdfs dfs -ls / 
 hdfs dfs -mkdir /sqoop/ingest
 ```
 - **Paso 03.02.**
