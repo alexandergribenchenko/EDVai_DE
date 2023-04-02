@@ -81,6 +81,14 @@ sqoop eval \
 --P \
 --query "select company_name, contact_name from customers where country = 'Argentina'"
 ```
+Versión 02:
+```bash
+sqoop eval \
+--connect jdbc:postgresql://172.17.0.3:5432/northwind \
+--username postgres \
+--P \
+--query "select company_name, contact_name from customers where country = 'Argentina' AND \$CONDITIONS"
+```
 PDT: incluir el AND \$CONDITIONS que aparece en el video principal de Fede.
 
 
