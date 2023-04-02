@@ -137,6 +137,8 @@ sqoop import \
 - **Abrir la url de Nifi:** Abrimos la UI web de nifi (desde el icono que esta en la carpeta DE en la VM o desde `https://localhost:8443/nifi`).
 - **Obtener las credenciales de Nifi:** Buscamos en los logs el usr y pass. Para ello ejecutamos `docker logs nifi | grep Generated` en la terminal de la VM.
 - **Nos logueamos en la url con las credenciales de Nifi:** ingresamos finalmente a Nifi.
+- **Entrar al container de Nifi:** si queremos entrar al container de Nifi que esta en ejecución podemos hacer `docker exec -it nifi bash`.
+
 
 
 ### Q_01. 
