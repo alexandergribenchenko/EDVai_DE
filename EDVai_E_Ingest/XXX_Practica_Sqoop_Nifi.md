@@ -53,6 +53,7 @@ sqoop import \
 ```
 
 ## 01.02. Ejercicios Sqoop
+Los ejercicios ejecutados a continuación se desarrollan al interior del container de hadoop.
 
 ### Q_01. 
 Mostrar las tablas de la base de datos `northwind`.
