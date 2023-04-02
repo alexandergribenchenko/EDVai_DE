@@ -56,6 +56,7 @@ sqoop import \
 Los ejercicios ejecutados a continuación se desarrollan al interior del container de hadoop.
 Verificaremos con `docker inspect edvai_postgres` cual es el puerto que esta utilizando el container. Comunmente el `172.17.0.3` en el `IPAdress` y el `5432` en el `HostPort`, dado que estos datos los emplearemos en la conexion `jdbc`.
 
+Se debe verificar ademas que ambos containers (`edvai_postgres` y `edvai_hadoop`) estan levantados. De no ser asi levantarlos en tal caso con `docker start edvai_postgres`.
 
 ### Q_01. 
 Mostrar las tablas de la base de datos `northwind`.
