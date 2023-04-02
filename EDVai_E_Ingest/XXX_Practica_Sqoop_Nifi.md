@@ -2,6 +2,11 @@
 
 ## 01.01. Comandos Sqoop.
 
+### Ver versión de sqoop
+```bash
+sqoop-version
+```
+
 ### Listar databases
 ```bash
 sqoop list-databases \
