@@ -126,19 +126,10 @@ sqoop import \
 ## 02.01. Pasos preliminares Nifi.
 - **Bajar la imagen de docker de Nifi:** ejecutamos `docker pull apache/nifi` en el terminal de la VM.
 - **Levantar el container de Nifi:** ejecutamos `docker run --name nifi -p 8443:8443 --dns=8.8.8.8 -d apache/nifi` en el terminal de la VM.
-- **Abrir la url de Nifi:** Abrimos la UI web de nifi (desde el icono que esta en la carpeta DE en la VM o desde https://localhost:8443/nifi).
+- **Abrir la url de Nifi:** Abrimos la UI web de nifi (desde el icono que esta en la carpeta DE en la VM o desde `https://localhost:8443/nifi`).
 - **Obtener las credenciales de Nifi:** Buscamos en los logs el usr y pass. Para ello ejecutamos `docker logs nifi | grep Generated` en la terminal de la VM.
 - **Nos logueamos en la url con las credenciales de Nifi:** ingresamos finalmente a Nifi.
 
-
-
-
-
-
-
-
-
-Recordar: `https://localhost:8443/nifi`
 
 ### Q_01. 
 En el shell de Nifi, crear un script `.sh` que descargue el archivo `starwars.csv` al directorio `/home/nifi/ingest` (crearlo si es necesario). Ejecutarlo con `./home/nifi/ingest/ingest.sh`. El archivo se encuentra en el enlace: `https://github.com/fpineyro/homework-0/blob/master/starwars.csv`.
