@@ -72,19 +72,43 @@ sqoop eval \
 --P \
 --query "select company_name, contact_name from customers where country = 'Argentina'"
 ```
-PDT: incluir el $CONDITIONS que aparece en el video principal de Fede.
+PDT: incluir el AND \$CONDITIONS que aparece en el video principal de Fede.
 
 
 ### Q_03. 
 Importar un archivo `.parquet` que contenga toda la tabla orders. Luego ingestar el archivo a HDFS (carpeta `/sqoop/ingest`).
+- **Paso 03.01.**
+Verificar si el directorio donde se va a ingestar existe, y sino crearlo.
 ```bash
-
+hdfs dfs -mkdir /sqoop/ingest
+```
+- **Paso 03.02.**
+Hacer la ingesta.
+```bash
+sqoop import \
+--connect jdbc:postgresql://172.17.0.3:5432/northwind \
+--username postgres \
+--table orders \
+--m 1 \
+--P \
+--target-dir /sqoop/ingest \
+--as-parquetfile \
+--delete-target-dir
 ```
 
 ### Q_04. 
 Importar un archivo `.parquet` que contenga solo los productos con mas 20 unidades en stock, de la tabla `Products`. Luego ingestar el archivo a HDFS (carpeta `ingest`).
 ```bash
-
+sqoop import \
+--connect jdbc:postgresql://172.17.0.3:5432/northwind \
+--username postgres \
+--table products \
+--m 1 \
+--P \
+--target-dir /sqoop/ingest \
+--as-parquetfile \
+--where "units_in_stock>20" \
+--delete-target-dir
 ```
 
 # Sección 02. Práctica Nifi.
