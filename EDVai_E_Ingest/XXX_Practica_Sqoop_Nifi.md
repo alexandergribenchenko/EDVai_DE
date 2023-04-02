@@ -62,7 +62,7 @@ Mostrar las tablas de la base de datos `northwind`.
 ```bash
 sqoop list-tables \
 --connect jdbc:postgresql://172.17.0.3:5432/northwind \
---username postgres 
+--username postgres \
 -P
 ```
 
